@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<string.h>
 #include <ctype.h>
 
 void toggleCase(char str[]) {
@@ -23,13 +24,17 @@ void toggleCase(char str[]) {
 int main() 
 {
     char str[50];
+    //for(int i=0;i<2;i++)
+    //{
 
     printf("Enter a string:  ");
-    fgets(str, sizeof(str), stdin);
-
+    gets(str);
+    
     toggleCase(str);
+    
 
     printf("\n \t Toggled case string: %s\n", str);
+   // }
 
     return 0;
 }
