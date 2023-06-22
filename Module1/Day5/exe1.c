@@ -24,8 +24,6 @@ void toggleCase(char str[]) {
 int main() 
 {
     char str[50];
-    //for(int i=0;i<2;i++)
-    //{
 
     printf("Enter a string:  ");
     gets(str);
@@ -34,7 +32,6 @@ int main()
     
 
     printf("\n \t Toggled case string: %s\n", str);
-   // }
 
     return 0;
 }

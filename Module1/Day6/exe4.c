@@ -23,12 +23,14 @@ int main()
 
    Student *students = (Student *)malloc(n * sizeof(Student));
 
+
    for (i = 0; i < n; i++)
    {
-      printf("\nEnter details for student %d:\n", i + 1);
+      printf("\n\t Enter details for student %d:\n", i + 1);
 
       printf("Name: ");
       fgets(students[i].name, sizeof(students[i].name), stdin);
+
       students[i].name[strcspn(students[i].name, "\n")] = '\0'; 
 
       printf("Age: ");
@@ -37,6 +39,7 @@ int main()
 
       printf("Course Name: ");
       fgets(students[i].courseName, sizeof(students[i].courseName), stdin);
+
       students[i].courseName[strcspn(students[i].courseName, "\n")] = '\0'; 
 
       printf("GPA: ");
@@ -44,18 +47,23 @@ int main()
       getchar();
    }
 
-   printf("\nStudent details:\n");
+   printf("\n The Student details = \n");
    
    for (i = 0; i < n; i++)
    {
       printf("\nDetails of student %d:\n", i + 1);
+
       printf("Name: %s\n", students[i].name);
+
       printf("Age: %d\n", students[i].age);
+
       printf("Course Name: %s\n", students[i].courseName);
+
       printf("GPA: %.2f\n", students[i].gpa);
+
    }
 
-   free(students);
+     free(students);
 
    return 0;
 }
